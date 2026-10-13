@@ -1,0 +1,14 @@
+.otp-input { color: #20221f; font: 1rem Arial, Helvetica, sans-serif; }
+.otp-input > label { display: block; margin-bottom: .65rem; font-weight: 700; }
+.otp-input__fields { position: relative; width: fit-content; max-width: 100%; }
+.otp-input__native { position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; box-sizing: border-box; opacity: 0; cursor: text; font-size: 16px; }
+.otp-input__slots { display: grid; grid-template-columns: repeat(var(--otp-length), minmax(0, 2.8rem)); gap: .55rem; pointer-events: none; }
+.otp-input__slot { display: grid; place-items: center; min-width: 0; height: 3.25rem; border: 1px solid #cdd0c6; border-radius: .65rem; background: #fff; font-size: 1.35rem; font-weight: 700; }
+.otp-input__native:focus-visible + .otp-input__slots .is-active { border-color: #525bde; outline: 3px solid rgb(82 91 222 / 30%); outline-offset: 1px; }
+.otp-input__native[aria-invalid="true"] + .otp-input__slots .otp-input__slot { border-color: #b42323; }
+.otp-input.is-disabled { opacity: .55; }
+.otp-input__error { margin: .65rem 0 0; color: #b42323; font-size: .85rem; }
+@media (max-width: 25rem) { .otp-input__slots { gap: .3rem; grid-template-columns: repeat(var(--otp-length), minmax(0, 2.35rem)); } }
+:where(.dark, [data-theme="dark"]) .otp-input { color: #f2f3ef; }
+:where(.dark, [data-theme="dark"]) .otp-input__slot { background: #20231e; border-color: #565b51; }
+:where(.dark, [data-theme="dark"]) .otp-input__error { color: #ffabab; }

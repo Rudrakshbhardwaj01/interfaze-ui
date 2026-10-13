@@ -1,0 +1,15 @@
+.magnetic-button { --magnetic-x: 0px; --magnetic-y: 0px; display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 2.75rem; padding: .7rem 1.15rem; border: 1px solid #252722; border-radius: 999px; background: #252722; color: #fff; font: inherit; font-weight: 700; cursor: pointer; transform: translate3d(var(--magnetic-x), var(--magnetic-y), 0); transition: transform .22s ease, background-color .2s ease, box-shadow .2s ease; }
+.magnetic-button--sm { min-height: 2.25rem; padding: .5rem .85rem; font-size: .85rem; }
+.magnetic-button--lg { min-height: 3.25rem; padding: .85rem 1.45rem; font-size: 1.05rem; }
+.magnetic-button--outline { background: transparent; color: #252722; }
+.magnetic-button--quiet { border-color: transparent; background: transparent; color: #252722; }
+.magnetic-button:hover { background: #41453b; box-shadow: 0 .5rem 1.25rem rgb(37 39 34 / 20%); }
+.magnetic-button:focus-visible { outline: 3px solid #8b9dff; outline-offset: 3px; }
+.magnetic-button:disabled { cursor: not-allowed; opacity: .55; transform: none; }
+.magnetic-button__spinner { width: 1em; height: 1em; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: magnetic-spin .7s linear infinite; }
+.magnetic-button--outline:hover { background: #eceee8; color: #252722; }
+.magnetic-button--quiet:hover { background: #eceee8; box-shadow: none; }
+@keyframes magnetic-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .magnetic-button { transform: none; transition: none; } }
+:where(.dark, [data-theme="dark"]) .magnetic-button--outline { color: #f2f3ef; border-color: #8b9185; }
+:where(.dark, [data-theme="dark"]) .magnetic-button--quiet { color: #f2f3ef; }

@@ -1,0 +1,16 @@
+.command-palette { width: min(calc(100% - 2rem), 38rem); overflow: hidden; border: 1px solid #d9dad3; border-radius: 1rem; background: #fff; color: #20221f; box-shadow: 0 1.5rem 4rem rgb(20 22 18 / 22%); font: 1rem/1.4 Arial, Helvetica, sans-serif; }
+.command-palette::backdrop { background: rgb(12 14 11 / 45%); }
+.command-palette h2 { margin: 0; padding: 1rem 1.15rem .65rem; font-size: .85rem; }
+.command-palette__search { display: flex; align-items: center; gap: .65rem; margin: 0 .7rem .7rem; padding: .75rem .85rem; border: 1px solid #d9dad3; border-radius: .65rem; color: #666960; }
+.command-palette__search input { min-width: 0; flex: 1; border: 0; outline: 0; background: transparent; color: inherit; font: inherit; }
+.command-palette__list { max-height: min(50vh, 22rem); overflow-y: auto; padding: 0 .45rem .45rem; }
+.command-palette__list button { display: flex; align-items: center; justify-content: space-between; width: 100%; gap: 1rem; padding: .7rem; border: 0; border-radius: .55rem; background: transparent; color: inherit; text-align: left; cursor: pointer; font: inherit; }
+.command-palette__list button.is-active, .command-palette__list button:hover { background: #f0f1eb; }
+.command-palette__list strong, .command-palette__list small { display: block; } .command-palette__list small { color: #686b67; font-size: .78rem; } .command-palette kbd { padding: .15rem .35rem; border: 1px solid #d9dad3; border-radius: .3rem; color: #686b67; font-size: .72rem; white-space: nowrap; } .command-palette__empty { padding: 1.5rem; color: #686b67; text-align: center; } .command-palette__hint { margin: 0; padding: .7rem 1rem; border-top: 1px solid #ecece7; color: #686b67; font-size: .72rem; } .command-palette__hint kbd { margin-right: .25rem; }
+@media (prefers-reduced-motion: reduce) { .command-palette__backdrop, .command-palette { animation: none; } }
+.command-palette__group { margin: .65rem .85rem .25rem; color: #888b83; font-size: .65rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.command-palette__command-icon { display: grid; place-items: center; min-width: 1.2rem; }
+.command-palette__command-text { flex: 1; min-width: 0; }
+.command-palette__close { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+:where(.dark, [data-theme="dark"]) .command-palette { border-color: #565b51; background: #20231e; color: #f2f3ef; }
+:where(.dark, [data-theme="dark"]) .command-palette__list button.is-active, :where(.dark, [data-theme="dark"]) .command-palette__list button:hover { background: #34382f; }

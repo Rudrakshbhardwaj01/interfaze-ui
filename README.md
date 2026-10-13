@@ -2,18 +2,19 @@
 
 InterfaZe is a design-first React component library and documentation site with a shadcn-compatible static registry. It is intended to help developers discover, inspect, install, and customize carefully crafted UI components.
 
-> **Status:** Initial development milestone. The documentation shell and the first distributable component, Floating Toolbar, are implemented. The public registry and Vercel deployment are not yet verified.
+> **Status:** Initial component-library expansion. Six distributable components and their shared documentation pages are implemented. The public registry and Vercel deployment are not yet verified.
 
 ## Implemented
 
 - Protected cinematic homepage with the existing InterfaZe visual identity.
 - Responsive documentation shell at `/components`.
-- Floating Toolbar documentation at `/components/floating-toolbar`.
+- Six component documentation routes under `/components/<name>`.
 - Persistent light/dark documentation theme.
 - Interactive preview, tooltips, selection state, notification indicators, and keyboard navigation.
 - Preview/Code tabs and copyable source, import, usage, and installation examples.
 - CLI and Manual installation modes with npm, pnpm, yarn, and bun command generation.
 - Static shadcn-compatible registry generation into `public/r`.
+- Searchable catalog filtering across the eight component categories.
 - Production-ready Vite build configuration for Vercel deployment.
 
 ## Stack
@@ -77,6 +78,19 @@ vercel.json               SPA fallback for client-side routes
 ```
 
 The website imports Floating Toolbar from the registry source through `src/components/FloatingToolbar.tsx`, so the live preview and distributed source share one implementation.
+
+## Components
+
+The current catalog contains:
+
+- Floating Toolbar — Navigation
+- Magnetic Button — Buttons & Actions
+- Command Palette — Navigation
+- OTP Input — Forms & Inputs
+- Toast Notification — Feedback & Status
+- Spotlight Card — Layout & Surfaces
+
+Each component has a live preview, source-backed Code tab, CLI installation command, Manual installation source, usage example, and API notes.
 
 ## Floating Toolbar
 
@@ -174,7 +188,7 @@ The public registry is not claimed to be available until those endpoints return 
 
 ## Known limitations
 
-- Only Floating Toolbar is distributable today.
+- The catalog currently contains six distributable components; additional planned categories are not populated with placeholder pages.
 - The generated registry output is intentionally not committed; deployment must run the build command.
 - No public deployment has been performed or verified in this workspace.
 - No npm package is published.

@@ -8,6 +8,7 @@
       "type": "registry:ui",
       "title": "Floating Toolbar",
       "description": "A portable React toolbar with shared animated highlights, tooltips, and keyboard navigation.",
+      "dependencies": [],
       "files": [
         {
           "path": "registry/default/floating-toolbar/floating-toolbar.tsx",
@@ -19,6 +20,61 @@
           "type": "registry:file",
           "target": "@ui/floating-toolbar.css"
         }
+      ]
+    },
+    {
+      "name": "magnetic-button",
+      "type": "registry:ui",
+      "title": "Magnetic Button",
+      "description": "A pointer-aware button that gently follows the cursor and respects reduced motion preferences.",
+      "dependencies": [],
+      "files": [
+        { "path": "registry/default/magnetic-button/magnetic-button.tsx", "type": "registry:ui", "target": "@ui/magnetic-button.tsx" },
+        { "path": "registry/default/magnetic-button/magnetic-button.css", "type": "registry:file", "target": "@ui/magnetic-button.css" }
+      ]
+    },
+    {
+      "name": "command-palette",
+      "type": "registry:ui",
+      "title": "Command Palette",
+      "description": "An accessible searchable command dialog with keyboard navigation and shortcut hints.",
+      "dependencies": [],
+      "files": [
+        { "path": "registry/default/command-palette/command-palette.tsx", "type": "registry:ui", "target": "@ui/command-palette.tsx" },
+        { "path": "registry/default/command-palette/command-palette.css", "type": "registry:file", "target": "@ui/command-palette.css" }
+      ]
+    },
+    {
+      "name": "otp-input",
+      "type": "registry:ui",
+      "title": "OTP Input",
+      "description": "A segmented, keyboard-friendly one-time password input with paste support.",
+      "dependencies": [],
+      "files": [
+        { "path": "registry/default/otp-input/otp-input.tsx", "type": "registry:ui", "target": "@ui/otp-input.tsx" },
+        { "path": "registry/default/otp-input/otp-input.css", "type": "registry:file", "target": "@ui/otp-input.css" }
+      ]
+    },
+    {
+      "name": "toast-notification",
+      "type": "registry:ui",
+      "title": "Toast Notification",
+      "description": "A dismissible live notification with status tones, actions, and an optional timeout.",
+      "dependencies": [],
+      "files": [
+        { "path": "registry/default/toast-notification/toast-notification.tsx", "type": "registry:ui", "target": "@ui/toast-notification.tsx" },
+        { "path": "registry/default/toast-notification/toast-notification.css", "type": "registry:file", "target": "@ui/toast-notification.css" }
+      ]
+    },
+    {
+      "name": "spotlight-card",
+      "type": "registry:ui",
+      "title": "Spotlight Card",
+      "description": "A content card with a pointer-following spotlight treatment and a reduced-motion fallback.",
+      "dependencies": [],
+      "files": [
+        { "path": "registry/default/spotlight-card/spotlight-card.tsx", "type": "registry:ui", "target": "@ui/spotlight-card.tsx" },
+        { "path": "registry/default/spotlight-card/spotlight-card.css", "type": "registry:file", "target": "@ui/spotlight-card.css" }
       ]
     }
   ]

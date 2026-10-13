@@ -1,0 +1,13 @@
+.toast-notification { display: flex; align-items: flex-start; gap: .75rem; width: min(100%, 24rem); padding: 1rem; border: 1px solid #d9dad3; border-radius: .8rem; background: #fff; color: #20221f; box-shadow: 0 .9rem 2rem rgb(20 22 18 / 15%); font: .92rem/1.4 Arial, Helvetica, sans-serif; animation: toast-in .22s ease both; } .toast-notification__icon { display: grid; flex: 0 0 1.45rem; place-items: center; width: 1.45rem; height: 1.45rem; border-radius: 50%; background: #e9eae4; font-weight: 700; } .toast-notification--success { border-color: #a8d3b2; } .toast-notification--success .toast-notification__icon { background: #d8f1dd; color: #176d2a; } .toast-notification--error { border-color: #e7b0b0; } .toast-notification--error .toast-notification__icon { background: #f9dddd; color: #a22323; } .toast-notification__body { flex: 1; min-width: 0; } .toast-notification__body strong { display: block; margin-bottom: .15rem; } .toast-notification__action { margin-top: .55rem; } .toast-notification__close { flex: 0 0 auto; padding: 0 .2rem; border: 0; background: transparent; color: #686b67; font-size: 1.35rem; line-height: 1; cursor: pointer; } .toast-notification__close:focus-visible { outline: 2px solid #525bde; outline-offset: 2px; } @keyframes toast-in { from { opacity: 0; transform: translateY(.5rem); } to { opacity: 1; transform: translateY(0); } } @media (prefers-reduced-motion: reduce) { .toast-notification { animation: none; } }
+.toast-notification--warning { border-color: #ddca93; }
+.toast-notification--warning .toast-notification__icon { background: #fff2c7; color: #795800; }
+.toast-notification--info { border-color: #b8c7e3; }
+.toast-notification--info .toast-notification__icon { background: #e2ebff; color: #31558f; }
+.toast-provider { position: fixed; z-index: 1100; display: flex; flex-direction: column; gap: .7rem; width: min(calc(100% - 2rem), 24rem); pointer-events: none; }
+.toast-provider .toast-notification { pointer-events: auto; }
+.toast-provider--bottom-right { right: 1rem; bottom: 1rem; }
+.toast-provider--bottom-left { left: 1rem; bottom: 1rem; }
+.toast-provider--top-right { right: 1rem; top: 1rem; }
+.toast-provider--top-left { left: 1rem; top: 1rem; }
+.toast-notification__loading-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+:where(.dark, [data-theme="dark"]) .toast-notification { border-color: #565b51; background: #20231e; color: #f2f3ef; }
