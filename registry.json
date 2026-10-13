@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "interfaze-ui",
+  "homepage": "https://github.com/Rudrakshbhardwaj01/interfaze-ui",
+  "items": [
+    {
+      "name": "floating-toolbar",
+      "type": "registry:ui",
+      "title": "Floating Toolbar",
+      "description": "A portable React toolbar with shared animated highlights, tooltips, and keyboard navigation.",
+      "files": [
+        {
+          "path": "registry/default/floating-toolbar/floating-toolbar.tsx",
+          "type": "registry:ui",
+          "target": "@ui/floating-toolbar.tsx"
+        },
+        {
+          "path": "registry/default/floating-toolbar/floating-toolbar.css",
+          "type": "registry:file",
+          "target": "@ui/floating-toolbar.css"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "interfaze-home",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "predev": "npm run registry:build",
+    "dev": "vite",
+    "build": "npm run registry:build && npm run typecheck && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --pretty false",
+    "registry:validate": "node scripts/validate-registry.mjs",
+    "registry:build": "shadcn build --output public/r",
+    "test": "npm run registry:validate",
+    "check": "npm run typecheck && npm run registry:validate && npm run build"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "typescript": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "shadcn": "^4.21.4"
+  }
+}
