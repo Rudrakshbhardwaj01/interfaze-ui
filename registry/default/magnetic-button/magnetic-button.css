@@ -9,6 +9,8 @@
 .magnetic-button__spinner { width: 1em; height: 1em; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: magnetic-spin .7s linear infinite; }
 .magnetic-button--outline:hover { background: #eceee8; color: #252722; }
 .magnetic-button--quiet:hover { background: #eceee8; box-shadow: none; }
+.magnetic-button--outline { background: #fff; color: #252722; border-color: #252722; }
+.magnetic-button--outline:hover { background: #eceee8; color: #252722; }
 @keyframes magnetic-spin { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .magnetic-button { transform: none; transition: none; } }
 :where(.dark, [data-theme="dark"]) .magnetic-button--outline { color: #f2f3ef; border-color: #8b9185; }
